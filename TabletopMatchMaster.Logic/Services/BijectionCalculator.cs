@@ -51,7 +51,9 @@ namespace TabletopMatchMaster.Logic.Services
 
 					tree.Add(childNode);
 
-					GetNextNodes(currentLevel++, childNode);
+					var nextLevel = currentLevel + 1;
+
+					GetNextNodes(nextLevel, childNode);
 				}
 			}
 
