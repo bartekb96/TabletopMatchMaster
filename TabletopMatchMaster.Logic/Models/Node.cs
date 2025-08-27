@@ -1,6 +1,6 @@
 ﻿namespace TabletopMatchMaster.Logic.Models
 {
-	internal class Node
+	public class Node
 	{
 		public string Name { get; set; }
 
@@ -8,14 +8,18 @@
 
 		public Node? ParentNode { get; set; }
 
+		public IEnumerable<string> ChildNames { get; set; }
+
 		public Node(
 			string name,
 			string? branchName,
-			Node? parent)
+			Node? parent,
+			IEnumerable<string> childNames)
 		{
 			Name = name;
 			BranchName = branchName;
 			ParentNode = parent;
+			ChildNames = childNames;
 		}
 	}
 }
