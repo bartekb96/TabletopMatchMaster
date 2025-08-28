@@ -2,8 +2,8 @@
 {
 	public interface IBijectionCalculator
 	{
-		IEnumerable<IEnumerable<(string, string)>> GetBijections(
-			IEnumerable<string> setA,
-			IEnumerable<string> setB);
+		List<List<(string, string)>> GetBijections(
+			List<string> setA,
+			List<string> setB);
 	}
 }

@@ -8,13 +8,13 @@
 
 		public Node? ParentNode { get; set; }
 
-		public IEnumerable<string> ChildNames { get; set; }
+		public List<string> ChildNames { get; set; }
 
 		public Node(
 			string name,
 			string? branchName,
 			Node? parent,
-			IEnumerable<string> childNames)
+			List<string> childNames)
 		{
 			Name = name;
 			BranchName = branchName;

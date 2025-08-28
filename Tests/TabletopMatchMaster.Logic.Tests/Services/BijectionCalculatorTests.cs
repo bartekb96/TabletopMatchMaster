@@ -8,7 +8,7 @@ namespace TabletopMatchMaster.Logic.Tests.Services
 	public sealed class BijectionCalculatorTests
 	{
 		[Test]
-		public void BuildTree_WithValidSets_ShouldReturnCorrectTree()
+		public void GetBijections_WithValidSets_ReturnsBijections()
 		{
 			// Arrange
 			var setD = new List<string> { "D1", "D2", "D3" };
@@ -16,14 +16,36 @@ namespace TabletopMatchMaster.Logic.Tests.Services
 			var bijectionCalculator = new BijectionCalculator();
 
 			// Act
-			var tree = bijectionCalculator.BuildTree(setD, setZ);
+			var bijections = bijectionCalculator.GetBijections(setD, setZ);
 
 			// Assert
-			tree.Should().NotBeNull();
-			tree.Should().HaveCount(16);
-			tree.Where(n => n.Name == "D1").Should().HaveCount(3);
-			tree.Where(n => n.Name == "D2").Should().HaveCount(6);
-			tree.Where(n => n.Name == "D3").Should().HaveCount(6);
+			bijections.Should().NotBeNull();
+			bijections.Should().HaveCount(6);
+			
+			for (int i = 0; i < bijections.Count(); i++)
+			{
+				for (int j = i + 1; j < bijections.Count(); j++)
+				{
+					AreListsEqual(bijections[i], bijections[j]).Should().BeFalse();
+				}
+			}
+		}
+
+		/// <summary>
+		/// returns true when lists contains all the same elements
+		/// i.e.
+		/// A, B, C
+		/// A, B, D
+		/// Are not equal
+		/// </summary>
+		private bool AreListsEqual(List<(string, string)> listA, List<(string, string)> listB)
+		{
+			if (listA.Count != listB.Count)
+			{
+				return false;
+			}
+
+			return listA.All(a => listB.Any(b => b.Item1 == a.Item1 && b.Item2 == a.Item2));
 		}
 	}
 }
