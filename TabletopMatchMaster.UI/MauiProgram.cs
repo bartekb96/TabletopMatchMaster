@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace TabletopMatchMaster.UI
 {
@@ -15,6 +16,7 @@ namespace TabletopMatchMaster.UI
 				});
 
 			builder.Services.AddMauiBlazorWebView();
+			builder.Services.AddMudServices();
 
 #if DEBUG
 			builder.Services.AddBlazorWebViewDeveloperTools();

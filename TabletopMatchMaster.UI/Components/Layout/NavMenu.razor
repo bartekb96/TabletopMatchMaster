@@ -1,1 +1,24 @@
-﻿
+﻿@using TabletopMatchMaster.UI.Components.Pages
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">TabletopMatchMaster</a>
+
+        <!-- Burger button for small screens-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="@EnemyArmiesPage.Path">Podaj armie oponenta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Resetuj oceny paringów</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
