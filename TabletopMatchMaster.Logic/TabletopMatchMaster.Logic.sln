@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabletopMatchMaster.Logic", "TabletopMatchMaster.Logic.csproj", "{DF19471B-6D57-43BE-87C6-9FCFAE33236F}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabletopMatchMaster.Logic.Tests", "..\Tests\TabletopMatchMaster.Logic.Tests\TabletopMatchMaster.Logic.Tests.csproj", "{2D153FC8-C116-435E-9BFE-BF7FDF95D142}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabletopMatchMaster.UI", "..\TabletopMatchMaster.UI\TabletopMatchMaster.UI.csproj", "{E7DAA0D8-B779-4CF7-9B87-DBC7F44909D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabletopMatchMaster.Console", "..\TabletopMatchMaster.Console\TabletopMatchMaster.Console.csproj", "{2074C0C8-72E7-41E3-B192-C3E558A9E0BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{E7DAA0D8-B779-4CF7-9B87-DBC7F44909D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7DAA0D8-B779-4CF7-9B87-DBC7F44909D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7DAA0D8-B779-4CF7-9B87-DBC7F44909D9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2074C0C8-72E7-41E3-B192-C3E558A9E0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2074C0C8-72E7-41E3-B192-C3E558A9E0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2074C0C8-72E7-41E3-B192-C3E558A9E0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2074C0C8-72E7-41E3-B192-C3E558A9E0BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
